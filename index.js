@@ -125,6 +125,6 @@ if(u.connection==='close' && u.lastDisconnect?.error?.output?.statusCode!==401) 
 }
 startBot() 
 require('http').createServer((req,res)=>res.end("Austin Bot Live")).listen(process.env.PORT || 3000)
-)
- 
+
+
   
