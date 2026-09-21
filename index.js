@@ -123,4 +123,6 @@ sock.ev.on('connection.update', (u)=>{
 if(u.connection==='close' && u.lastDisconnect?.error?.output?.statusCode!==401) startBot()
 })
 }
-startBot()
+startBot(
+  require('http').createServer((req,res)=>res.end("Austin Bot Live")).listen(process.env.PORT || 3000)
+)
